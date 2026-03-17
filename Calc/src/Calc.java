@@ -48,7 +48,7 @@ public class Calc {
         return "Displaying private fields using toString(): \n" + "num 1: " + num1 + "\nnum 2: " + num2 + "\nProcess finished with exit code 0";
     }
 
-    // Helper method that determines if he input is a number or not
+    // Helper method that determines if he input is a number or not, reasks the prompts for inputting numbers, and loops
     public static double getValidDouble(Scanner scan, String prompt) {
         System.out.print(prompt);
         while (!scan.hasNextDouble()) {
