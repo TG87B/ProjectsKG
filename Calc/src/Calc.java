@@ -45,7 +45,7 @@ public class Calc {
 
     //toString method
     public String toString(){
-        return "Displaying private fields using toString(): \n" + "num 1: " + num1 + "\nnum 2: " + num2 + "\nProcess finished with exit code 0";
+        return "Displaying private fields using toString(): \n" + "num 1: " + num1 + "\nnum 2: " + num2;
     }
 
     // Helper method that determines if he input is a number or not, reasks the prompts for inputting numbers, and loops
