@@ -1,5 +1,7 @@
 //Kyle Greer
 
+import java.util.Scanner;
+
 public class Calc {
 
     //private data
@@ -44,5 +46,19 @@ public class Calc {
     //toString method
     public String toString(){
         return "Displaying private fields using toString(): \n" + "num 1: " + num1 + "\nnum 2: " + num2;
+    }
+
+    // Helper method that determines if he input is a number or not, reasks the prompts for inputting numbers, and loops
+    public static double getValidDouble(Scanner scan, String display) {
+        System.out.print(display);
+        while (!scan.hasNextDouble()) {
+            System.out.println("invalid input. Please enter a number.");
+            scan.nextLine();
+            System.out.print(display);
+        }
+        //Stops the second input from skipping the second reenter prompt
+        double val = scan.nextDouble();
+        scan.nextLine();
+        return val;
     }
 }
