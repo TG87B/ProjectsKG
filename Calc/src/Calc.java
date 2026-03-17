@@ -49,12 +49,12 @@ public class Calc {
     }
 
     // Helper method that determines if he input is a number or not, reasks the prompts for inputting numbers, and loops
-    public static double getValidDouble(Scanner scan, String prompt) {
-        System.out.print(prompt);
+    public static double getValidDouble(Scanner scan, String display) {
+        System.out.print(display);
         while (!scan.hasNextDouble()) {
             System.out.println("invalid input. Please enter a number.");
             scan.nextLine();
-            System.out.print(prompt);
+            System.out.print(display);
         }
         //Stops the second input from skipping the second reenter prompt
         double val = scan.nextDouble();
