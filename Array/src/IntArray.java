@@ -7,7 +7,6 @@ import java.util.Random;
 public class IntArray {
     private int length;
     private int myArray[];
-
     private Random rand = new Random();
 
     // constructor that takes an int argument for the length of the array
@@ -70,5 +69,6 @@ public class IntArray {
 
     return result;
 }
-    }
+
+}
 
