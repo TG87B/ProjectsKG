@@ -17,7 +17,7 @@ public class Exam extends Assessment {
             int score = 100 - (numMissed * pointsEach);
             setScore(score);
 
-//this handles divison by 0 and missed questions
+//Exception handles divison by 0 and missed questions
     } catch (Exception e) {
         this.numQuestions = 0;
         this.pointsEach = 0;
