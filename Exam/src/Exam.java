@@ -9,11 +9,21 @@ public class Exam extends Assessment {
 
 //Constructor that takes the number of questions and number of missed questions
     public Exam(int numQuestions, int numMissed) {
-        this.numQuestions = numQuestions;
-        this.pointsEach = 100 / numQuestions;
-        int score = 100 - (numMissed * pointsEach);
-        setScore(score);
+
+        try {
+            this.numQuestions = numQuestions;
+            this.pointsEach = 100 / numQuestions;
+
+            int score = 100 - (numMissed * pointsEach);
+            setScore(score);
+
+//this handles divison by 0 and missed questions
+    } catch (Exception e) {
+        this.numQuestions = 0;
+        this.pointsEach = 0;
+        setScore(0);
     }
+}
 
 // Getters for the points and number of questions
     public int getPointsEach() {
